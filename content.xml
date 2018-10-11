@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <audioguides>
+    <audioguide>
+      <id>APPPPFM2018001</id>
+      <title>Piazza del Popolo</title>
+      <location>Fermo</location>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <tipo>
+        <id>IT2</id>
+        <lang>italiano</lang>
+        <level>non vedenti</level>
+      </tipo>
+    </audioguide>
+    <audioguide>
+      <id>AQERCEL2017001</id>
+      <title>Eremo di Sant'Onofrio</title>
+      <location>Sulmona</location>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+    </audioguide>
+    <audioguide>
+      <id>AQSMCOL2018001</id>
+      <title>Basilica di Collemaggio</title>
+      <location>L'Aquila</location>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <tipo>
+        <id>IT2</id>
+        <lang>italiano</lang>
+        <level>non vedenti</level>
+      </tipo>
+    </audioguide>
+    <audioguide>
+      <id>TESNFLV2016001</id>
+      <title>Duomo di San Flaviano</title>
+      <location>Giulianova</location>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>EN1</id>
+        <lang>inglese</lang>
+        <level>per tutti</level>
+      </tipo>
+    </audioguide>
+    <audioguide>
+      <id>TESMMAR2017001</id>
+      <title>Chiesa di Santa Maria a mare</title>
+      <location>Giulianova</location>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+    </audioguide>
+  </audioguides>
+</root>

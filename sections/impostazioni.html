@@ -1,0 +1,58 @@
+<template class="task-template">
+  <section id="impostazioni-section" style="background:#f9f9f9;padding:60px 40px 90px" class="section js-section u-category-media">
+
+<style>td{word-break: break-all;}
+.ports-cell{
+	font-size:11px;
+	padding:4px 6px}
+</style>
+    <div>
+		<h3>Impostazioni</h3>
+		<p>Pagina opzioni:</p>
+		<div>
+			<input type="checkbox" id="disabilitaplayer" name="disabilitaplayer"
+						 value="disabilitaplayer" checked />
+			<label for="disabilitaplayer">Disabilita tasti play, stop e rewind sul player</label>
+		</div>
+		<div>
+			<input type="checkbox" id="abilitaSTT" name="abilitaSTT"
+						 value="abilitaSTT" />
+			<label for="abilitaSTT">Abilita comandi vocali</label>
+		</div>
+		<div>
+			<input type="checkbox" id="primaschermatacheck" name="primaschermatacheck"
+						 value="primaschermataplayer" />
+			<label for="primaschermatacheck">Voglio che il player sia sempre la prima schermata aperta (se non spuntata l'opzione, il software aprirà come prima schermata l'ultima consultata dall'utente)</label>
+		</div>
+		<div>
+				<label for="selectGlobalLang">Lingua di base dell'audioguida: </label>
+				<select id="selectGlobalLang" name="selectGlobalLang">
+						<option value="IT">italiano</option>
+						<option value="EN">english</option>
+						<option value="FR">français</option>
+						<option value="DE">deutsch</option>
+						<option value="ES">español</option>
+						<option value="ZH">中文</option>
+				</select>
+			</div>
+			<div>
+					<label for="selectGlobalLevel">Livello di base dell'audioguida: </label>
+					<select id="selectGlobalLevel">
+							<option value="0">per tutti</option>
+							<option value="1">bambini</option>
+							<option value="2">non vedenti</option>
+							<option value="3">esperti</option>
+					</select>
+				</div>
+		<p>modifica ordine contenuti scaricati [tasto, apre pagina con dragdrop audioguides che modifica content.xml)</p>
+		<p>Tra le altre opzioni avanzate (quindi non dentro impostazioni, ma nel sottomenu), mettere la pagina di help, con 2 link (leggi FAQ e informazioni sul progetto) e pulsantone INIZIA TOUR magari con la libreria js che fa il tour.</p>
+    </div>
+    <!--Script-->
+        <script>
+            // You can also require other files to run in this process
+            //require('./sections/comdetail.js')
+        </script>
+
+
+  </section>
+</template>

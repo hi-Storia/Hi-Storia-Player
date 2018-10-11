@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hi-Storia Tune</title>
+    <link rel="stylesheet" href="res/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="res/css/styles.css">
+
+    <link rel="stylesheet" href="pushy-master/css/normalize.css">
+
+    <link rel="stylesheet" href="assets/css/section.css">
+    <link rel="import" href="sections/impostazioni.html">
+    <link rel="import" href="sections/contenuti-scaricati.html">
+    <link rel="import" href="sections/player.html">
+    <link rel="import" href="sections/player-adv.html">
+    <link rel="import" href="sections/com.html">
+    <link rel="import" href="sections/about.html">
+</head>
+
+<body>
+    
+        <input type="checkbox" id="menu-toggle" class="toggle__input" />
+        <label for="menu-toggle" class="toggle__label"><span class="toggle__icon"></span><img style="display:inline" src="./assets/img/logo.png"></label>
+
+    <nav class="nav js-nav">
+        <ul class="nav__list">
+            <li class="nav__item pushy-link nav-button"><a href="#" id="button-player" data-section="player">Player</a></li>
+            <li class="nav__item pushy-link nav-button"><a href="#" id="button-player-adv" data-section="player-adv">Info tracce</a></li>
+            <li class="nav__item pushy-link nav-button"><a href="#" id="button-contenuti-scaricati" data-section="contenuti-scaricati">Contenuti</a></li>
+            <li class="nav__item pushy-link nav-button"><a href="#" id="button-impostazioni" data-section="impostazioni">Impostazioni</a></li>
+            <li class="nav__item pushy-link nav-button"><a href="#" id="button-com" data-section="com">Dispositivi</a></li>
+        </ul>
+    </nav>
+    <div class="content-container g-wrapper">
+        <div id="loadingbox" class="loadingfullpage" style="display:none"></div>
+        <div id="is_connected" class="front_page">
+            <img src="assets/img/404.png">
+            <h3>Errore di connessione</h3>
+            <p>Nessun dispositivo Hi-Storia è connesso. Assicurati che il dispositivo sia connesso via cavo USB</p>
+            <a id="update-page" href="#">Aggiorna</a>
+            <a id="continue-page" href="#">oppure continua senza dispositivo</a>
+        </div>
+        <div id="is_loading" class="front_page">
+            <img src="assets/img/404.png">
+            <h3>Connessione in corso</h3>
+            <p>Collega il dispositivo Hi-Storia nell'apposito ingresso USB del PC</p>
+        </div>
+        <div class="site-overlay"></div>
+        <div id="container" class="container">
+            <header>
+                <a href="#" class="info-header">
+                    <div style="font-size: 9px;font-weight: 300;">lingua</div>
+                    <div class="info-header-s">
+                        <select id="selectLang">
+                                <option value="IT">italiano</option>
+                                <option value="EN">inglese</option>
+                        </select>
+                    </div>
+                </a>
+                <a href="#" class="info-header">
+                    <div style="font-size: 9px;font-weight: 300;">livello</div>
+                    <div class="info-header-s">
+                            <select id="selectLevel">
+                                    <option value="0">per tutti</option>
+                                    <option value="1">bambini</option>
+                                    <option value="2">non vedenti</option>
+                            </select>
+                        </div>            </a>
+            </header>
+            <main class="content js-content"></main>
+
+        </div>
+        <footer class="player-footer">
+            <div id="progress">
+                <div id="current"></div>
+            </div>
+            <div class="play-view">
+                <div class="player-row">
+                    <div class="player-column">
+                        <div class="current-track-box"><span class="index-song">1</span></div>
+                        <div class="current-song">&nbsp;</div>
+                        <div id="current-audioguide">La Cattedrale di San Tommaso</div>
+                    </div>
+                    <div class="player-column">
+                        <div class="play-control">
+                            <span class="fas fa-step-backward" id="prev"></span>
+                            <div class="space-fix-1"></div>
+                            <span class="fas fa-play" id="play"></span>
+                            <div class="space-fix-2"></div>
+                            <span class="fas fa-step-forward" id="next"> </span>
+                        </div>
+                    </div>
+                    <div class="player-column">
+                        <div class="volume-control">
+                            <span class="fas fa-volume-up" id="vol"></span>
+                            <div class="vol-bar center-it">
+                                <div id="vol-progress">
+                                    <div id="vol-current"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="omask" class="o-mask"></div>
+    <!--Scripts-->
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script>if (window.module) module = window.module;</script>
+
+    <script>
+        // You can also require other files to run in this process
+        //require('./serialcom.js')
+        require('./renderer.js')
+        require('./assets/imports')
+        require('./assets/nav')
+        require('./assets/ex-links')        
+    </script>
+</body>
+
+</html>

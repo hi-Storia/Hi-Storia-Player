@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Download</title>
+</head>
+
+<body>
+    <style>
+        .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.wrapper div{
+    border: 2px solid #666;
+}
+</style>
+    <h3>Contenuti disponibili</h3>
+    <div class="wrapper">
+        <div>One
+                <button id="download-file" type="button">Scaricame!</button>
+        </div>
+        <div>Two
+                <button id="download-file" type="button">Scaricame!</button>
+        </div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+      </div>
+
+    <!--Script-->
+        <script>
+            // You can also require other files to run in this process
+            require('./download.js')
+        </script>
+</body>
+
+</html>

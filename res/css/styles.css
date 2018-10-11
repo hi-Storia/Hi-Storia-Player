@@ -1,0 +1,877 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans'), local('OpenSans'), url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: bolder;
+    font-weight: 900;
+    src: local('Open Sans ExtraBold'), local('OpenSansExtraBolder'), url(../fonts/OpenSans-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-LightItalic.ttf) format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: local('Montserrat'), local('Montserrat'), url(../fonts/Montserrat-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    user-select: none;
+}
+
+.center-it {
+    display:flex;
+    justify-content:center; /* horizontal */
+    align-items:center;     /* vertical */
+}
+
+.header-font {
+    font-family: 'Open Sans', sans-serif;
+    font-style: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container {
+    height: 100vh;
+}
+
+.task-bar {
+    width: 100%;
+    background-color: #EBEBEB;
+    height: 7%;
+}
+
+.play-task {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.list-task {
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+
+.play-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding:10px;
+    overflow: hidden;
+}
+
+.space-fix-3 {
+    flex: 1;
+    order: 1;
+}
+
+.player-info {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    padding: 1% 0;
+}
+
+canvas {
+    flex: 3;
+    order: 3;
+    outline: 0;
+}
+
+
+#seek-pos {
+    flex: 1;
+    order: 1;
+    color: #12757f;
+}
+
+.seek-bar {
+    flex: 10;
+    order: 2;
+    width: 100%;
+    padding: 0.5% 0;
+}
+
+#seek-duration {
+    flex: 1;
+    order: 3;
+    text-align: right;
+    color: #12757f;
+}
+
+#progress {
+    background-color: #262626;
+    width: 100%;
+    height: 5px;
+    border-radius: 0px;
+    cursor: pointer;
+    border-top: 1px solid #111;
+}
+
+#current {
+    width: 0%;
+    height: 100%;
+    background-color: #39aab0;
+    border-radius: 0px;
+}
+
+.player-control {
+    padding: 0 8%;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.play-control {
+    flex: 1;
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#prev {
+    flex: 1;
+    order: 1;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#prev:hover {
+    color: #39aab0;
+}
+
+#prev:active {
+    color: #39aab0;
+}
+
+
+.space-fix-1 {
+    flex: 1;
+    order: 2;
+}
+
+#play {
+    color: #39aab0;
+    flex: 1;
+    order: 3;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#play:active {
+    color: #262626;
+}
+
+.space-fix-2 {
+    flex: 1;
+    order: 4;
+}
+
+#next {
+    flex: 1;
+    order: 5;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#next:hover {
+    color: #39aab0;
+}
+
+#next:active {
+    color: #39aab0;
+}
+
+.volume-control {
+    flex: 1;
+    order: 3;
+    display: flex;
+}
+
+#vol {
+    flex: 1;
+    order: 1;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#vol:hover {
+    color: #DC0A2A;
+}
+
+#vol:active {
+    color: #AA021B;
+}
+
+.vol-bar {
+    flex: 4;
+    order: 2;
+    width: 100%;
+    height: 80%;
+}
+
+#vol-progress {
+    width: 100%;
+    height: 60%;
+    background-color: #262626;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#vol-current {
+    width: 100%;
+    height: 100%;
+    background-color: #DC0A2A;
+    border-radius: 10px;
+}
+
+.list-view {
+    width: 40%;
+    background-color: rgba(255,255,255,0.9);
+    top: 60px;
+    position: absolute;
+    overflow: auto;
+    bottom: 0;
+    right: 0;
+    padding-top: 10px;
+}
+
+ul {
+    cursor: pointer;
+}
+
+.list {
+    display: flex;
+    padding: 2% 5%;
+    font-family: 'Lato',sans-serif;
+    color: #333;
+    border-bottom: 1px solid #d3dcdd;
+}
+
+.index {
+    flex: 1;
+    order: 1;
+}
+
+.song {
+    display: block;
+    flex: 3;
+    order: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.duration {
+    flex: 2;
+    order: 3;
+    text-align: right;
+}
+
+.selected {
+    background-color: #39aab0;
+    font-weight: 900;
+    color: #fff;
+}
+
+#list-ul{
+    padding:10px;
+}
+
+#player-section{
+    background-image:url(../../defaultbg.jpg); /* sostituisci con un bg universale */
+    background-repeat: no-repeat;
+    background-size:100%;
+    transition: background 0.3s linear;
+    background-size: cover;
+}
+
+.player-column{
+    font-size:9px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    color:white;
+}
+
+.player-column .current-song{
+    font-weight:regular;
+}
+
+.player-column #current-audioguide{
+    font-weight: 300;
+}
+
+.player-column .current-track-box{
+    background: #047074;
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+  .info-generali p{
+      margin:4px 0;
+  }
+
+  /*stili splash pages*/
+  .front_page{
+    position:absolute;
+    z-index:999;
+    width:100%;
+    height:100%;
+    background:#39aab0;
+    text-align: center;
+    color:#fff;
+}
+.front_page h3{
+    font-family:'Montserrat';
+    text-transform: uppercase;
+    font-size:24px;
+}
+.front_page img{
+    margin-top:80px;
+}
+
+#container header{
+    z-index: 19999;
+    position: fixed;
+    background: #12757f;
+    width: 100%;
+    padding: 4px;
+    height: 60px;
+}
+/*player.html*/
+#trackmeta{
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+#trackname{
+    font-size: 36px;
+    font-weight: normal;
+}
+#audioguidename{
+    margin-bottom: 12px;
+    font-size: 36px;
+    font-weight: 300;
+}
+#projectname{
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* contenuti scaricati */
+    .contenuti-scaricati-wrapper{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      margin-bottom: 60px;
+    }
+    #contenuti-scaricati-section{
+        background-color: #f9f9f9;
+    }
+    .column50{
+      float: left;
+      width: 50%;
+    }
+    .contenuti-scaricati-box, .contenuti-scaricabili-box{
+      border-bottom:2px solid #d3dcdd;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      position:relative;
+    }
+    a.download-file, a.load-file, a.cancel-download{
+      background-color: #39aab0;
+      border-bottom: 3px solid #047074;
+      color: #fff;
+      cursor: pointer;
+      padding: 8px 20px;
+      float: right;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: "Montserrat";
+      font-weight: normal;
+      font-size: 13px;
+    }
+    a.cancel-download{
+        float: none;
+        text-align: center;
+        display: inline-block;
+        width: fit-content;
+    }
+    a.download-file:hover, a.load-file:hover, a.cancel-download:hover, a.active-com-button{
+      background-color: #047074;
+    }
+    a.load-file-active{
+      background-color: #ccc;
+      border-bottom: 3px solid #ccc;
+      color: #fff;
+      cursor: default;
+      pointer-events: none;
+    }
+    a.load-file-active:hover{
+      background-color: #ccc;
+    }
+    .cs-moreinfo{
+      font-size:11px;
+      color:#14232a;
+      font-weight: 300;
+      clear: both;
+      text-align: right;
+      padding-top: 6px;
+    }
+    .contenuti-scaricati-wrapper h6{
+      font-weight: 300;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      margin: 10px 0 14px;
+    }
+    .contenuti-scaricati-wrapper h4{
+      font-size: 18px;
+      font-family: "Montserrat";
+      margin: 10px 0;
+    }
+ /* fine contenuti scaricati */
+ .imgthumb{
+     width: 120px;
+     margin-right: 20px;
+    }
+/* sezione download */
+.download-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 4px;
+  }
+  
+  .download-bar-fill {
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    background-color: #659cef;
+    color:#fff;
+    font-size:9px;
+    text-align: center;
+    
+    transition: width 500ms ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  .download-bar-fill:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    animation: move 2s linear infinite;
+    overflow: hidden;
+}
+#download-progress, #unzip-progress{
+    display:none
+}
+a.download-file-active{
+    background-color: #ccc;
+    border-bottom: 3px solid #ccc;
+    color: #fff;
+    cursor: default;
+    pointer-events: none;
+}
+a.download-file-active:hover{
+    background-color: #ccc;
+}
+#downloadbox, #connectbox{
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 20px 40px 30px 30px;
+}
+.pausecanceldwbox, .connectbx{
+    margin: 10px auto 0;
+    text-align: center;
+}
+.contenuti-scaricabili-offline{
+    opacity: 0.3;
+    pointer-events: none;
+}
+#is-online-offline{
+    float: right;
+    font-weight: 400;
+    font-size: 9px;
+  }
+  #is-online-offline::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .is-online::before{
+    background: rgb(56, 199, 27);
+  }
+  .is-offline::before{
+    background: rgb(146, 13, 13);
+  }
+/* fine sezione download */
+.loadingfullpage{
+    background-color: rgba(255, 255, 255, 1);
+    opacity:0.85;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size:40%;
+    background-position:50%;
+    z-index: 99099;
+    position: absolute;
+}
+#loadingbox{
+    background-image:url(../../assets/img/loading3.gif);
+    background-repeat: no-repeat;
+}
+
+.editremoveaudioguide{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    display:none;
+}
+
+.removeaudioguide{
+    background: #f98383;
+    border-radius: 26px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    font-size: 12px;
+    font-family: "Montserrat";
+    width: 26px;
+    height: 26px;
+    display: block;
+    text-align: center;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+h5.subtitle{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+}
+.shakebox{
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-2px, 0px) rotate(1deg); }
+    30% { transform: translate(2px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Pagina com, lista porte */
+.row-portslist{
+    word-break: break-all;
+    display: table-row
+}
+.portlist-now{
+    background-color:#9afac2;
+}
+a.active-com-button{
+    background-color: #39aab0;
+    border-bottom: 3px solid #047074;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    float: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 9px;
+    white-space: nowrap;
+}
+.blinking-text{
+    animation:blinkingText 0.8s linear infinite;
+}
+@keyframes blinkingText{
+    95% {
+        opacity: 0;
+      }
+}
+/* fine pagina com, lista porte */
+
+body::-webkit-scrollbar {
+    width: 0.6em;
+    z-index:999;
+}
+ 
+body::-webkit-scrollbar-track {
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.info-header-s select{
+    margin-top:2px;
+    background: transparent;
+    color: #fff;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    border: none;
+}
+.info-header-s select option{
+    background-color: #047074;
+}
+.info-header-s select option:hover{
+    background-color: #075255;
+}
+.info-header{
+    text-decoration: none;
+    float: right;
+    margin-right: 40px;
+    color:#fff;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    margin-top: 12px;
+}
+
+.player-footer{
+    position: fixed;
+    z-index: 120;
+    bottom: 0;
+    height: 80px;
+    background: #14232a;
+    color: white;
+    width: 100%;
+}
+
+.player-column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.player-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.toggle__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .toggle__label {
+    position: absolute;
+    z-index: 99999;
+    margin: 10px;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .toggle__label span {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transition: 0.4s ease;
+    margin-right:10px;
+  }
+  .toggle__label span:before, .toggle__label span:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transition: 0.4s ease;
+  }
+  
+  .nav {
+    position: fixed;
+    z-index: 100;
+    width: 300px;
+    height: 100%;
+    padding-top: 96px;
+    overflow-y: auto;
+    background: #12757f;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  }
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav__item {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .nav__item a {
+    display: block;
+    height: 30px;
+    padding-left: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav__item:hover {
+    background: #e5e5e5;
+  }
+  
+  .o-mask {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: #333;
+    opacity: 0;
+    transition: opacity 0.4s ease, width 0s 0.4s ease, height 0s 0.4s ease;
+  }
+  
+  .g-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  }
+  
+  .toggle__input:checked + .toggle__label span {
+    border-color: transparent;
+  }
+  .toggle__input:checked + .toggle__label span:before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .toggle__input:checked + .toggle__label span:after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .toggle__input:checked ~ .nav {
+    box-shadow: 5px 0 10px rgba(51, 51, 51, 0.5);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .toggle__input:checked ~ .o-mask {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+  }
+  .toggle__input:checked ~ .g-wrapper {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+
+  html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}

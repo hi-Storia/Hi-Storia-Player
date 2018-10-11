@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+  <audioguides>
+    <audioguide>
+      <id>APPPPFM2018001</id>
+      <title>Piazza del Popolo</title>
+      <authors>ITET "Carducci-Galilei" di Fermo</authors>
+      <location>Fermo</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <tipo>
+        <id>IT2</id>
+        <lang>italiano</lang>
+        <level>non vedenti</level>
+      </tipo>
+      <downloaded>1</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>AQERCEL2017001</id>
+      <title>Eremo di Sant'Onofrio</title>
+      <authors>IIS "Ovidio" di Sulmona</authors>
+      <location>Sulmona</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>AQERSSM2018001</id>
+      <title>Eremo di Santo Spirito a Majella</title>
+      <authors>IIS "Ovidio" di Sulmona</authors>
+      <location>Roccamorice</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>AQSMCOL2018001</id>
+      <title>Basilica di Collemaggio</title>
+      <authors>IIS "d'Aosta" dell'Aquila</authors>
+      <location>L'Aquila</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>IT1</id>
+        <lang>italiano</lang>
+        <level>bambini</level>
+      </tipo>
+      <tipo>
+        <id>IT2</id>
+        <lang>italiano</lang>
+        <level>non vedenti</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>CHSTOMA2015001</id>
+      <title>Cattedrale di San Tommaso</title>
+      <authors>Istituto Comprensivo "Tosti" di Ortona</authors>
+      <location>Ortona</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>TESMMAR2017001</id>
+      <title>Chiesa di Santa Maria a Mare</title>
+      <authors>Liceo Scientifico "Curie" di Giulianova</authors>
+      <location>Giulianova</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>EN0</id>
+        <lang>inglese</lang>
+        <level>per tutti</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>TESMMAR2017002</id>
+      <title>Il portale della Chiesa di Santa Maria a Mare</title>
+      <authors>Liceo Scientifico "Curie" di Giulianova</authors>
+      <location>Giulianova</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>EN0</id>
+        <lang>inglese</lang>
+        <level>per tutti</level>
+      </tipo>
+      <downloaded>0</downloaded>
+    </audioguide>
+    <audioguide>
+      <id>TESNFLV2016001</id>
+      <title>Duomo di San Flaviano</title>
+      <authors>Liceo Scientifico "Curie" di Giulianova</authors>
+      <location>Giulianova</location>
+      <info>#</info>
+      <tipo>
+        <id>IT0</id>
+        <lang>italiano</lang>
+        <level>per tutti</level>
+      </tipo>
+      <tipo>
+        <id>EN0</id>
+        <lang>inglese</lang>
+        <level>per tutti</level>
+      </tipo>
+      <downloaded>1</downloaded>
+    </audioguide>
+  </audioguides>
+</root>

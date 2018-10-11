@@ -1,0 +1,59 @@
+<template class="task-template">
+  <section style="padding:60px 40px 90px"
+   id="contenuti-scaricati-section" class="section js-section u-category-contenuti">
+
+
+    <h3>Contenuti disponibili
+      <span style="float: right;cursor:pointer" class="fas fa-edit" id="showdeleteaudioguide"></span>
+    </h3>
+    <h5 class="subtitle">Queste sono le audioguide che hai scaricato e che puoi ascoltare attraverso un dispositivo Hi-Storia. Assicurati di essere connesso al dispositivo Hi-Storia relativo all'audioguida attivata.</h5>
+    <div id="contenuti-scaricati-div" class="contenuti-scaricati-wrapper">
+
+      
+    </div>
+
+    <h3 id="scaricaheader">Scarica uno di questi contenuti
+      <span id="is-online-offline" class="is-online">Sei online</span>
+    </h3>
+    <h5 class="subtitle">Questi sono i contenuti aggiuntivi, realizzati da altre organizzazioni e scuole di Hi-Storia, che puoi scaricare dalla piattaforma web. Assicurati di essere connesso ad Internet per scaricare i contenuti.</h5>
+    <div id="connectbox" style="display:none">
+      <p>Devi essere connesso per scaricare i nuovi contenuti. Connettiti ad Internet e aggiorna l'applicazione</p>
+      <div class="connectbx">
+        <a id="upgrade-connect" class="cancel-download" href="#">Sono connesso, aggiorna ora</a>
+      </div>
+    </div>
+
+    <div id="downloadbox" style="display:none">
+      <div id="download-progress">
+        <p>Download dei file dell'audioguida</p>
+        <div class="download-bar">
+          <span id="download-bar-progress" class="download-bar-fill" style="width: 0%"></span>
+        </div>
+        <div class="pausecanceldwbox">
+          <a id="pause-download" data-status="active" class="cancel-download" href="#">Pausa</a>
+          <a id="cancel-download" class="cancel-download" href="#">Annulla download</a>
+        </div>
+      </div>
+
+      <div id="unzip-progress">
+        <p>Estrazione dei file dell'audioguida</p>
+        <div class="download-bar">
+          <span id="unzip-bar-progress" class="download-bar-fill" style="width: 0%"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contenuti-scaricati-wrapper" id="boxavaliable">
+
+
+    </div>
+    <!--Script-->
+        <script>
+            // You can also require other files to run in this process
+            //require('./download.js')
+        </script>
+    
+
+  </section>
+</template>
