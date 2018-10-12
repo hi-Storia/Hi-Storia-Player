@@ -2,8 +2,7 @@
 **Version alpha**
 
 Player for 
-[Open Source Tactile Audioguide Hi-Storia] 
-Player for ![Sharp Tune] https://github.com/hi-Storia/Tactile-devices-hi-Storia)
+[Open Source Tactile Audioguide Hi-Storia] https://github.com/hi-Storia/Tactile-devices-hi-Storia)
 
 ## Contribute
 * Clone the repo
